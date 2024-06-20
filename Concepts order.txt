@@ -1,0 +1,5 @@
+1. named optional parameters. 
+2. extends which is inheritance
+3. private properties only exist when the parent class is in a different file
+4. super keyword to access the private parent propeties using getter functions
+5. 

@@ -1,0 +1,61 @@
+import "package:flutter/material.dart";
+import "package:text_widget/custom_icon.dart";
+import "package:text_widget/custom_text.dart";
+
+class CustomScaffold extends StatelessWidget{
+  final List<Widget> widgets = const [
+      CustomIcon(objectColor: Colors.green, objectSize: 50,objectIcon: Icons.agriculture,),
+      CustomIcon(objectColor: Colors.pink, objectSize: 50, objectIcon: Icons.car_repair,),
+      CustomIcon(objectColor: Colors.red, objectSize: 50, objectIcon: Icons.airplane_ticket,),
+];
+  const CustomScaffold({super.key});
+  @override
+  Widget build(BuildContext context){
+    return Scaffold(
+      appBar: AppBar(
+     //   leading: const CustomIcon(objectColor: Colors.yellow,objectSize: 50,),
+      title: const Text("My Bar"),
+      centerTitle: true,
+      actions: widgets
+
+      ),
+   // backgroundColor: Colors.purple,
+    drawer: const Drawer(
+      backgroundColor: Colors.greenAccent,
+      shadowColor: Colors.yellowAccent,
+      width: 250,
+      child: CustomIcon(objectColor: Colors.yellow, objectIcon: Icons.car_repair, objectSize: 200,
+
+       ),
+    ),
+    persistentFooterButtons:widgets,
+    persistentFooterAlignment: AlignmentDirectional.bottomCenter,
+    bottomNavigationBar: NavigationBar(destinations:widgets),
+    
+    );
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+    
+
+ */
